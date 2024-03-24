@@ -19,6 +19,11 @@ body {
   background: var(--bg-url)  top center/cover;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 .container-sobre {
   width: 100%;
   max-width: 900px;
