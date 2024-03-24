@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(../assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(../assets/moon-stars.svg);
+}
+
+
+body {
+  background: var(--bg-url)  top center/cover;
+}
+
+.container-sobre {
+  width: 100%;
+  max-width: 900px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+
+
+/* sobre */
+
+article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 24px;
+  margin: 5px;
+
+  gap: 10px;
+
+}
+
+#article {
+  background: var(--highlight-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.work h3 {
+  margin: 20px;
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+
+.works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+}
+
+
+.works a {
+  display: block;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, max-height 0.5s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 3.6rem;
+}
+
+.works a:hover {
+  background: var(--hover-color);
+  white-space: normal;
+  max-height: unset;
+}
+
+.works a span {
+  color: green;
+}
+
+.works a.download-link {
+  display: inline;
+  padding: 0;
+  background: none;
+  border: none;
+  font-weight: normal;
+  color: inherit;
+  text-decoration: underline;
+  transition: none;
+}
+
+/* media queries */
+@media (max-width: 600px) { 
+  .work-container {
+    grid-template-columns: 1fr; /* Alteração para uma coluna */
+  }
+}
